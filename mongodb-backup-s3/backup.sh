@@ -40,9 +40,12 @@ printf "%s\n" "Starting up mongo router process, connecting with ${MONGO_CONFIGD
 
 mongos --configdb "${MONGO_CONFIGDB}" &
 
+# mongos needs some time toconnect. this is ugly, but still better than looping with nc
+sleep 10
+
 printf "%s\n" "Checking for database ${MONGO_DATABASE}"
 
-#mongo --eval 'sh.status();' | grep "${MONGO_DATABASE}"
+mongo --eval 'sh.status();' | grep "${MONGO_DATABASE}"
 
 if [ $? != 0 ] ; then
   >&2 printf "%s\n" "Could not find database ${MONGO_DATABASE}."
