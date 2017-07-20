@@ -13,7 +13,7 @@
 - `SCHEDULE` cron syntax for peridoc backups, syntax see below
 - `S3_ENCRYPTION` encryption setting for S3 bucket, boolean, default: false
 - `NEW_SNAPSHOT` create new snapshot instead of incrementa, boolean, default: false
-
+- `SCHEDULE` backup schedule time, see explanations below
 
 ### Periodic Backups
 

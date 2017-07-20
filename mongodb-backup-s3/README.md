@@ -9,7 +9,7 @@
 - `S3_BUCKET` your AWS S3 bucket path *required*
 - `S3_PREFIX` path prefix in your bucket *required*
 - `S3_REGION` the AWS S3 bucket region (default: eu-central-1)
-- `SCHEDULE` backup schedule time, see explainatons below
+- `SCHEDULE` backup schedule time, see explanations below
 
 ### Periodic Backups
 
